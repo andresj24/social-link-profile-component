@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey-700: hsl(0, 0%, 20%);
+    --grey-800: hsl(0, 0%, 12%);
+    --grey-900: hsl(0, 0%, 8%);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /*1rem = 10px*/
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    /* outline: 1px solid red;  */
+}
+
+body {
+    font-family: 'Inter',  sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    background-color: var(--grey-900);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 97vh;
+}
+
+.card {
+    width: 30rem;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3rem;
+    border-radius: 1rem;
+    background-color: var(--grey-800);
+}
+
+.card figure {
+    width: 7rem;
+    height: 7rem;
+    margin-top: .5rem;
+}
+
+.card figure img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.card h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    color: var(--green);
+    margin: 0;
+}
+
+.card p {
+    font-size: 1.2rem;
+    color: var(--white);
+    margin: 3rem 0;
+}
+
+.card .btn {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    background-color: var(--grey-700);
+    color: var(--white);
+}
+
+.card .btn:hover,
+.card .btn:focus {
+    background-color: var(--green);
+    color: var(--grey-700);
+    cursor: pointer;
+}
+
+.card .btn:last-child {
+    margin-bottom: 0;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    color: var(--white);
+}
+
+.attribution a { 
+    color: var(--green);
+    text-decoration: none; 
+}
+
+@media  (max-width: 400px) {
+    html {
+        font-size: 55%;
+    }
+        
+    .card {
+        max-width: 90%; 
+    }
+    
+}
